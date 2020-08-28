@@ -153,8 +153,11 @@ namespace Cake.MarkdownToPdf
 
             var template = File.ReadAllText(settings.HtmlTemplateFile);
 
-            if (!workingDirectory.EndsWith(Path.PathSeparator.ToString()))
-                workingDirectory += Path.PathSeparator;
+            /*if (!workingDirectory.EndsWith(Path.PathSeparator.ToString()))
+                workingDirectory += Path.PathSeparator;*/
+
+            if (!workingDirectory.EndsWith($@"{Path.DirectorySeparatorChar}"))
+                workingDirectory += Path.DirectorySeparatorChar;
 
             return template
                 .Replace("{$html}", html)
