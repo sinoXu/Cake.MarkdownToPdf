@@ -3,6 +3,8 @@
 
 Cake addin to convert markdown files to pdf. This addin uses [Markdig](https://github.com/lunet-io/markdig) markdown processor.
 
+解决本地图片无法解析的问题
+
 ## Usage
 
 Directly in your build script via a Cake `#addin` directive:
